@@ -1,0 +1,39 @@
+Source: ruby-typhoeus
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb,
+               rake,
+               ruby-ethon,
+               ruby-faraday,
+               ruby-json,
+               ruby-rack,
+               ruby-rspec,
+               ruby-sinatra,
+               ruby-dalli,
+               ruby-redis,
+               ruby-webrick (>= 1.7~)
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-typhoeus.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-typhoeus
+Homepage: https://github.com/typhoeus/typhoeus
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-typhoeus
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-ethon,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: parallel HTTP library on top of ethon
+ Typhoeus is a HTTP client library based on Ethon which wraps libcurl.
+ Sitting on top of libcurl makes Typhoeus very reliable and fast.
+ .
+ Like a modern code version of the mythical beast with 100 serpent heads,
+ Typhoeus runs HTTP requests in parallel while cleanly encapsulating handling
+ logic.

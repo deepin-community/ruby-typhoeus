@@ -1,0 +1,17 @@
+Description: we don't need bundler or rubygems
+Author: Praveen Arimbrathodiyil <praveen@debian.org>
+Last-Updated: 2013-05-17
+
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -1,8 +1,8 @@
+ $LOAD_PATH.unshift(File.dirname(__FILE__))
+ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+ 
+-require "bundler"
+-Bundler.setup
++#require "bundler"
++#Bundler.setup
+ require "typhoeus"
+ require "rspec"
+ 
